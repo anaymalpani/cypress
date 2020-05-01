@@ -37,7 +37,9 @@
     "pretest-unit-watch": "npm run check-deps-pre",
     "test-unit-watch": "./test/support/watch test/unit",
     "pretest-watch": "npm run check-deps-pre",
-    "test-watch": "./test/support/watch test"
+    "test-watch": "./test/support/watch test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "@cypress/browserify-preprocessor": "1.1.2",
@@ -133,7 +135,8 @@
     "url-parse": "1.4.7",
     "uuid": "3.3.2",
     "widest-line": "3.1.0",
-    "winston": "2.4.4"
+    "winston": "2.4.4",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/core": "7.4.4",
@@ -184,5 +187,6 @@
     "config",
     "lib"
   ],
-  "productName": "Cypress"
+  "productName": "Cypress",
+  "snyk": true
 }
